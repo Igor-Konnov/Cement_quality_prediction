@@ -67,7 +67,7 @@ content = html.Div(style=dict(textAlign='center', border='1px'),children=[
          dbc.Card( dbc.CardBody([
 
     html.P("A machine learning model(ML) is a file that has been trained to\
-            recognize certain types of patterns.The dataset is splited by\
+            recognize certain types of patterns.The dataset is devided by\
             trained and test samples and 5 MLs have been trained.\
             Predictors - selected cement quality parameters, target variable\
             (predicted variable)- 2 days cement compressive\
@@ -102,7 +102,9 @@ content = html.Div(style=dict(textAlign='center', border='1px'),children=[
            demonstrated better performance. So, ideally, you will use a combination\
            of two models, such as Ridge Regression and Gradient Boosting. Gradient\
            Boosting requires a bigger dataset, but Linear regression models are\
-                  good for a small dataset. " ) ]))], className = 'py-2' ),
+                  good for a small dataset. " )
+
+        ]))], className = 'py-2' ),
 
     html.Div([html.H5('Ml models limitations')]),
     html.Div([html.P("Example: how do the different models predict 2D strength during 'SO3 optimization?'")], className = 'row py-2 mx-auto'),

@@ -33,11 +33,11 @@ content = html.Div(style = dict(textAlign='center'), children=[
              Python code or a node in a Knime app. The parameter selection, data cleaning,\
              analysis, and model tuning are much more complex because they require knowledge\
              of cement production, statistics, and the ML paradigm."),
-    html.P("I have seen tons of articles and discussions about machine learning used to\
-             predict cement quality but have never seen a complete application online.\
-             Pursuing data science  certification, I created this WEB application to\
-             demonstrate what different models predict using a real\
-             dataset and apply it to the cement additives business.")
+    html.P("There are a plethora of articles and discussions about machine learning\
+            used to predict cement quality but as yet never a complete\
+            application online. Pursuing ML certification, I created this\
+            WEB application to demonstrate what different models predict\
+            using a real dataset and apply it to the cement additives business.")
 
    ])  ], ))  ], className = 'shadow-lg p-3  rounded')
 ])

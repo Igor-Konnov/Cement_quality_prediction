@@ -66,12 +66,16 @@ content = html.Div(style=dict(textAlign='center', border='4px'),children=[
                  ], ),
              ])  ])
   ], ),
+  html.Div([html.P('It is noted that in a real world cement plant environment the\
+    variables are rarely outside a fairly tight well established range.\
+    The upper and lower limits have been set based on realistic real\
+     world values.')], className= 'row mt-4'),
    html.Br(),html.Hr([], className = "divider py-2 bg-primary"),
    html.Div([html.H6("How to measure the performance of cement additives with\
                       ML?")],className="mt-4"),
    html.Div(style = dict(textAlign='left'), children =[dbc.Card(dbc.CardBody([
              html.P("1.	Enter cement parameters of a sample treated with the additive,\
-                    set additive dosage to zero- get the precited compressive strength without additive."),
+                    set additive dosage to zero-get the predicted compressive strength without additive."),
              html.P("2.	Compare the predicted quality and the actual quality of this\
                      cement sample treated with the additive. The difference is the\
                       additive performance. Consider the model accuracy.")
@@ -106,6 +110,7 @@ def display_output(rows, columns):
     if  model_demonstration['R 008, %'][0] >4 or  model_demonstration['SO₃, %'][0] >4\
      or model_demonstration['additive1, g/t'][0] >1000 or  model_demonstration['additive2, g/t'][0] >500\
      or model_demonstration['t, cement, ° С'][0] > 130\
+     or model_demonstration['Eq.Na2O,%'][0] > 1.5\
      or model_demonstration['moisture,%'][0] > 1  or model_demonstration['Free_lime,%'][0]>2 :
 
      danger = 'a value is out of range, no prediction available'

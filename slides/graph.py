@@ -17,15 +17,22 @@ content = html.Div(style=dict(textAlign='center', border='1px'),children=[
     html.H2(id='intro-div'),
     html.Br(),html.Hr([], className = "divider py-0.5 bg-primary"),
     html.Div([html.H4('Cement quality parameters correlation with the compressive\
-     strength. Why these parameters selceted for predictions?')] ),
+     strength. Why these parameters selected for predictions?')] ),
 
-html.Div(style=dict(textAlign='left'), children = [
-    html.P("The predictors are selected based on correlation coefficient\
-           (Pearson correlation), assuming that all parameters are normally distributed,\
-            except the dosages of additives."),
-    html.P("Correlation(absolute values) < 0,1 - no correlation, <0,2-03 - small correlation, <0,3-0,7 - moderate, > 0,7 - strong correlation."
-)], className ='mx-auto py-2'),
-html.Div([html.H6('Quality  parameaters and trend lines')], className ='row mx-auto'),
+
+    html.Div([
+         dbc.Card( dbc.CardBody([
+
+    html.P("The predictors are selected based on correlation coefficient (Pearson\
+            correlation), assuming that all parameters are normally distributed,\
+            except the dosages of additives. The correlation coefficient tells us\
+            about the strength and direction of the linear relationship between\
+            independent and target variables. But correlation does not imply\
+            causation. Predictors selection requires in-depth knowledge of\
+            cement production and cement chemistry as well.", style = dict(textAlign ="left"))]) ) ]),
+
+
+html.Div([html.H6('Quality  parameaters and trend lines')], className ='row mx-auto py-2'),
 html.Div([
     dbc.Col(
     html.Div(
@@ -44,6 +51,10 @@ html.Div([
         )), width={"size": 3, "order": "first", "offset": 3})
 ], className ="row py-2"),
 dcc.Graph(id='indicator-graphic'),
+
+html.Div([html.P("Correlation(absolute values) < 0,1 - no correlation, <0,2-03 - small\
+               correlation, <0,3-0,7 - moderate, > 0,7 - strong correlation."
+)]),
 
 html.Div([html.H6('Correlation matrix, select parameters:')], className = 'row py-2 mx-auto'),
 html.Div ([

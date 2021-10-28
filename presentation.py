@@ -14,7 +14,7 @@ slide_order = [
 ]
 
 # the text that appears in the tab
-presentation_title = 'Dash Slides'
+presentation_title = 'AI for cement'
 
 # the text that appears in the previous and next buttons
 prev_text = '<< Previous'
