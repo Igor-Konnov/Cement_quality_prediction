@@ -18,13 +18,13 @@ app.index_string = """<!DOCTYPE html>
     <head>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MMKV4L1HRM"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-MMKV4L1HRM');
+  gtag('config', '');
 </script>
 
  {%metas%}
